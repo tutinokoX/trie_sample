@@ -52,7 +52,7 @@ void StateOut::StartSet(){
 
 	std::cout << "\n\t|";
 	for(int i = 0 ; i < 100 / SPLIT_SIZE ; i ++) std::cout << "-";
-	std::cout << "|\n\t";
+	std::cout << "|\n\t ";
 }
 
 

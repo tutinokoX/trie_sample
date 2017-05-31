@@ -1,12 +1,15 @@
 //
 // Created by ydoi-mac on 2017/05/09.
 //
-// trieに必要な関数
-//   - EndCheck
+// [find_test]
 //   - Goto
-//   - OutEndChar
-//   - Find
+//   - Follow
 //
+// [dump_test]
+//   - Goto
+//   - EndCheck
+//   - NextCheck
+
 
 #ifndef XSDA_DEV_TESTER_HPP
 #define XSDA_DEV_TESTER_HPP
@@ -23,7 +26,6 @@
 #include <vector>
 #include "ProcessTimer.hpp"
 #include "StateOut.hpp"
-
 
 
 class RandomNumberGenerator
@@ -107,21 +109,8 @@ void Tester::set_keys(std::string filepath) {
 }
 
 
-
-template <class T>
-struct refer_select;
-
-template <>
-struct refer_select< list_trie::ListTrie > { using type = list_trie::refer; };
-
-// template <>
-// struct refer_select< table_trie::TableTrie >{ using type = table_trie::refer; };
-
-
 template <class T>
 bool Tester::find_speed_test( T &trie ){
-
-    using Refer = typename refer_select<T>::type;
 
     if(_RANDOM_KEYSET.empty()){
         std::cerr << "err : KEYSETが設定されていません\n";
@@ -137,17 +126,11 @@ bool Tester::find_speed_test( T &trie ){
     for(size_t i = 0 ; i < _RANDOM_KEYSET.size() ; i++) {
 
         std::string key = _RANDOM_KEYSET[i];
-        Refer ptr = trie.OutRoot();
 
-        for(size_t j = 0 ; j < key.size() ; j++){
-
-            ptr = trie.Goto( ptr , static_cast<uint8_t>(key[j]) );
-            if(ptr == trie.OutFree()){
-                std::cerr << "err 　" << i << " : " << _RANDOM_KEYSET[i] << "\n";
-                // return false;
-            }
+        if (!trie.Follow( key )) {
+            std::cerr << "err 　" << i << " : " << _RANDOM_KEYSET[i] << "\n";
+            return false;
         }
-
     }
 
     pt.Measure(0);
@@ -159,13 +142,8 @@ bool Tester::find_speed_test( T &trie ){
 }
 
 
-
-
 template <class T>
 bool Tester::find_test( T &trie ) {
-
-    using Refer = typename refer_select<T>::type;
-
 
     std::cout << "find_test ... " << std::endl;
     for (size_t i = 0; i < _RANDOM_KEYSET.size(); i++) {
@@ -178,56 +156,76 @@ bool Tester::find_test( T &trie ) {
             std::cerr << "err 　" << i << " : " << _RANDOM_KEYSET[i] << "\n";
             return false;
         }
-
     }
 
     std::cout << "done.\n";
-
     return true;
 }
 
 
-
-
 template <class T>
-bool Tester::dump_test( T &trie ) {
+class dump_tester{
 
-    using Refer = typename refer_select<T>::type;
+private:
+    T trie_;
+    StateOut so_;
+    uint64_t dump_count_;
+    size_t keyset_size_;
 
-    std::cout << "dump_test ... " << std::endl;
-    Refer current = trie.OutRoot();
-    std::queue<Refer> goto_list;
-    goto_list.push(current);
-    uint64_t dump_count = 0;
+public:
+    dump_tester(T trie) :trie_(trie) {
 
-    StateOut so;
-    so.AddMaxState( _KEYSET.size() );
-    so.StartSet();
+        dump_count_ = 0;
+    }
 
-    while (1) {
+    void SetKeysize(size_t keyset_size){
 
-        if ( goto_list.empty() ) break;
-        current = goto_list.front();
-        goto_list.pop();
+        keyset_size_ = keyset_size;
+        so_.AddMaxState(keyset_size_);
+        so_.StartSet();
+    }
 
-        if( trie.EndCheck( current ) ){
-            dump_count ++;
-            so.Output( dump_count );
-            if( !trie.IsTerm() ) continue;   // 終端フラグならこの処理は必要なし : 動的に変更するように検討
+    template <typename N>
+    void Dump( N current ){
+
+        if( trie_.EndCheck( current ) ){
+            dump_count_ ++;
+            so_.Output( dump_count_ );
+            if( !trie_.IsTerm() ) return;   // 終端フラグならこの処理は必要なし : 動的に変更するように検討
         }
 
         for (int l = 0; l <= 255; l++) {
-            Refer next = trie.Goto( current , static_cast<uint8_t >(l) );
-            if (trie.NextCheck( next )) {
-                goto_list.push( next );
+            N next = trie_.Goto( current , static_cast<uint8_t >(l) );
+            if (trie_.NextCheck( next )) {
+
+                Dump(next);
             }
         }
-
     }
-    std::cout << "\ndump_count : " << dump_count << "\n";
+
+    bool Check(){
+
+        std::cout << "\ndump_count = " << dump_count_ << "\n";
+        return (dump_count_ == keyset_size_);
+    }
+};
+
+
+template <class T>
+bool Tester::dump_test(T &trie) {
+
+    std::cout << "dump_test ... " << std::endl;
+
+    dump_tester<T> dt(trie);
+
+    dt.SetKeysize(_KEYSET.size());
+    dt.Dump( trie.OutRoot() );
+    dt.Check();
+
     std::cout << "done.\n";
 
     return true;
+
 }
 
 #endif //XSDA_DEV_TESTER_HPP

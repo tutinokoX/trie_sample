@@ -21,16 +21,21 @@ TEST(Trie , build){
     std::string file_path;
     std::cout << "keyset path \n ->";
     std::cin >> file_path;
+    // file_path = "/Users/ydoi/Documents/study/xsda-dev/test/_KEYSET/paper_keyset";
 
     tester.set_keys(file_path);
     tu.SetKeys(file_path);
 }
 
 
-TEST(ListTrie, all ) {
+TEST(DaTrie, all ) {
 
     da_trie::DaTrie trie;
     tu.Build(trie);
+    // trie.Output();
 
+    tester.find_test(trie);
+    tester.dump_test(trie);
+    tester.find_speed_test(trie);
 
 }
