@@ -23,6 +23,8 @@ ListTrie.hpp
 ../include/ListTrie.hpp
 ListTrieBuilder.hpp
 ../include/ListTrieBuilder.hpp
+StateOut.hpp
+../include/StateOut.hpp
 
 ../include/ListTrie.hpp
 ListTrieBuilder.hpp

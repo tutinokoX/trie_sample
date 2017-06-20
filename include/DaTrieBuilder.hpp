@@ -12,7 +12,7 @@
 #include <stack>
 #include "ListTrie.hpp"
 #include "ListTrieBuilder.hpp"
-
+#include "StateOut.hpp"
 
 namespace da_trie{
 
@@ -36,13 +36,19 @@ namespace da_trie{
 
         // trieとdaのインデックス番号を対応を保存方法を検討中
 
+        StateOut so;
+        size_t counter = 0;
+
+
     public:
 
         TrieForDa(){
 
             ORDER.push(ROOT);
             MATCH.insert(std::make_pair( ROOT , 0 ));
+
         }
+
 
         std::vector<uint8_t> Labels( trie_refer trie_current ){
 
@@ -59,6 +65,13 @@ namespace da_trie{
         }
 
 
+        void Start( std::vector<std::string> keyset ){
+
+            StaticInsert(keyset);
+            so.AddMaxState( (size_t)NodeNum() - keyset.size() );
+            so.StartSet();
+        }
+
         bool NodeGet( trie_refer &trie_index , da_refer &da_index ){
 
             while(1) {
@@ -74,7 +87,7 @@ namespace da_trie{
 
                 if (EndCheck(trie_index)) {
 
-                    // so.Output(dump_count);
+
                     if (!IsTerm()) continue;   // 終端フラグならこの処理は必要なし : 動的に変更するように検討
                 }
 
@@ -90,6 +103,8 @@ namespace da_trie{
                     }
                 }
 
+                counter ++;
+                so.Output(counter);
                 return true;
             }
         }
@@ -218,16 +233,29 @@ namespace da_trie{
         bool DynamicInsert(std::string str);
 
         void Output();
+
+        void Dicsave(std::string file_path);
     };
 
 
+    void DaTrieBuilder::Dicsave(std::string file_path) {
+
+
+        std::cout << "base  size : " << BASE.size() << "\n";
+        std::cout << "check size : " << CHECK.size() << "\n";
+
+        // とりあえずデータの保存は後回し
+
+
+
+    }
 
     bool DaTrieBuilder::StaticInsert(std::vector <std::string> keyset) {
 
         // trieを構築
-        trie.StaticInsert(keyset);
+        trie.Start( keyset );
 
-        std::cout << "node num : " << trie.NodeNum() << "\n";
+        // std::cout << "node num : " << trie.NodeNum() << "\n";
 
         FirstMemoryAllocation();
 

@@ -117,7 +117,7 @@ bool Tester::find_speed_test( T &trie ){
         return false;
     }
 
-    std::cout << "find_speed_test ... " << std::endl;
+    std::cout << "\nfind_speed_test ... " << std::endl;
 
     ProcessTimer pt;
     pt.AddTimerSuffix(0 , 1);
@@ -145,7 +145,7 @@ bool Tester::find_speed_test( T &trie ){
 template <class T>
 bool Tester::find_test( T &trie ) {
 
-    std::cout << "find_test ... " << std::endl;
+    std::cout << "\nfind_test ... " << std::endl;
     for (size_t i = 0; i < _RANDOM_KEYSET.size(); i++) {
 
         std::string key = _RANDOM_KEYSET[i];
@@ -214,7 +214,7 @@ public:
 template <class T>
 bool Tester::dump_test(T &trie) {
 
-    std::cout << "dump_test ... " << std::endl;
+    std::cout << "\ndump_test ... " << std::endl;
 
     dump_tester<T> dt(trie);
 

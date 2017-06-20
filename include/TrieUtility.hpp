@@ -12,6 +12,8 @@ private:
 
     std::vector<std::string> _KEYSET;
 
+    std::string save_path;
+
     void read_keys(std::string file_path, std::vector<std::string> &KEYSET) {
 
         std::ifstream ifs(file_path);
@@ -36,6 +38,11 @@ public:
         read_keys(file_path , _KEYSET);
     }
 
+    void SetSavepath(std::string file_path){
+
+        save_path = file_path;
+    }
+
     template<class T>
     void ConfSplit( T &trie ,  std::string value){
 
@@ -49,6 +56,7 @@ public:
         trie.Setup_LIMIT_PER( std::stod( buf[1] ) );
     }
 
+
     /*
      * 静的と動的の区別をつけれるようにするべきかも
      */
@@ -56,6 +64,18 @@ public:
     void Build( T &trie ) {
 
         trie.StaticInsert(_KEYSET);
+    }
+
+
+
+    template <class T>
+    void Save(T &trie){
+
+        if(save_path.empty()) {
+            std::cout << "save path \n -> ";
+            std::cin >> save_path;
+        }
+        trie.Dicsave( save_path );
     }
 
 };

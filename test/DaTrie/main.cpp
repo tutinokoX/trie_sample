@@ -28,7 +28,7 @@ TEST(Trie , build){
 }
 
 
-TEST(DaTrie, all ) {
+TEST(DaTrie, test_all ) {
 
     da_trie::DaTrie trie;
     tu.Build(trie);
@@ -37,5 +37,9 @@ TEST(DaTrie, all ) {
     tester.find_test(trie);
     tester.dump_test(trie);
     tester.find_speed_test(trie);
+
+    tu.Save(trie);
+
+
 
 }
