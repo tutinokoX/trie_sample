@@ -21,32 +21,8 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/test/ListTrie/CMakeFiles/listtrie.dir/main.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/test/ListTrie/CMakeFiles/listtrie.dir/main.cpp.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/test/ListTrie/listtrie" afterPath="$PROJECT_DIR$/cmake-build-debug/test/ListTrie/listtrie" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/main.dir/build.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/main.dir/build.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/main.dir/flags.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/main.dir/flags.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/main.dir/link.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/main.dir/link.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/test/DaTrie/CMakeFiles/datrie.dir/CXX.includecache" afterPath="$PROJECT_DIR$/cmake-build-debug/test/DaTrie/CMakeFiles/datrie.dir/CXX.includecache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/test/DaTrie/CMakeFiles/datrie.dir/build.make" afterPath="$PROJECT_DIR$/cmake-build-debug/test/DaTrie/CMakeFiles/datrie.dir/build.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/test/DaTrie/CMakeFiles/datrie.dir/flags.make" afterPath="$PROJECT_DIR$/cmake-build-debug/test/DaTrie/CMakeFiles/datrie.dir/flags.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/test/DaTrie/CMakeFiles/datrie.dir/link.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/test/DaTrie/CMakeFiles/datrie.dir/link.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/test/DaTrie/Makefile" afterPath="$PROJECT_DIR$/cmake-build-debug/test/DaTrie/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/test/DaTrie/cmake_install.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/test/DaTrie/cmake_install.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/test/ListTrie/CMakeFiles/listtrie.dir/build.make" afterPath="$PROJECT_DIR$/cmake-build-debug/test/ListTrie/CMakeFiles/listtrie.dir/build.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/test/ListTrie/CMakeFiles/listtrie.dir/flags.make" afterPath="$PROJECT_DIR$/cmake-build-debug/test/ListTrie/CMakeFiles/listtrie.dir/flags.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/test/ListTrie/CMakeFiles/listtrie.dir/link.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/test/ListTrie/CMakeFiles/listtrie.dir/link.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/test/ListTrie/Makefile" afterPath="$PROJECT_DIR$/cmake-build-debug/test/ListTrie/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/test/ListTrie/cmake_install.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/test/ListTrie/cmake_install.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/test/Makefile" afterPath="$PROJECT_DIR$/cmake-build-debug/test/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/test/cmake_install.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/test/cmake_install.cmake" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/DaTrieBuilder.hpp" afterPath="$PROJECT_DIR$/include/DaTrieBuilder.hpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/Tester.hpp" afterPath="$PROJECT_DIR$/include/Tester.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/TrieUtility.hpp" afterPath="$PROJECT_DIR$/include/TrieUtility.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.cpp" afterPath="$PROJECT_DIR$/main.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/DaTrie/main.cpp" afterPath="$PROJECT_DIR$/test/DaTrie/main.cpp" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -59,11 +35,23 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="15" lean-forward="false" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
+            <state relative-caret-position="435">
+              <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="23" column="30" lean-forward="false" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -72,7 +60,7 @@
       <file leaf-file-name="TrieUtility.hpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/include/TrieUtility.hpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1155">
+            <state relative-caret-position="956">
               <caret line="77" column="33" lean-forward="false" selection-start-line="77" selection-start-column="33" selection-end-line="77" selection-end-column="33" />
               <folding>
                 <element signature="e#917#926#0" expanded="true" />
@@ -86,8 +74,8 @@
       <file leaf-file-name="DaTrie.hpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/include/DaTrie.hpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
+            <state relative-caret-position="60">
+              <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -96,23 +84,28 @@
       <file leaf-file-name="Tester.hpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/include/Tester.hpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="57" column="41" lean-forward="false" selection-start-line="57" selection-start-column="41" selection-end-line="57" selection-end-column="41" />
+            <state relative-caret-position="-423">
+              <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
               <folding>
                 <element signature="e#207#226#0" expanded="true" />
-                <element signature="e#3399#3408#0" expanded="true" />
-                <element signature="e#3762#3774#0" expanded="true" />
-                <element signature="e#4365#4374#0" expanded="true" />
+                <element signature="e#1077#1086#0" expanded="true" />
+                <element signature="e#1138#1147#0" expanded="true" />
+                <element signature="e#1193#1202#0" expanded="true" />
+                <element signature="e#2279#2288#0" expanded="true" />
+                <element signature="e#2935#2944#0" expanded="true" />
+                <element signature="e#3407#3416#0" expanded="true" />
+                <element signature="e#3770#3782#0" expanded="true" />
+                <element signature="e#4373#4382#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DaTrieBuilder.hpp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DaTrieBuilder.hpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/include/DaTrieBuilder.hpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="624">
-              <caret line="249" column="0" lean-forward="true" selection-start-line="249" selection-start-column="0" selection-end-line="249" selection-end-column="0" />
+            <state relative-caret-position="267">
+              <caret line="24" column="26" lean-forward="true" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
               <folding>
                 <element signature="e#195#211#0" expanded="true" />
               </folding>
@@ -127,6 +120,9 @@
       <find>node</find>
       <find>TEMP_LIST[0].prev()</find>
       <find>dump_test</find>
+      <find>prev</find>
+      <find>prev 0</find>
+      <find>prev</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -151,10 +147,10 @@
         <option value="$PROJECT_DIR$/include/StateOut.hpp" />
         <option value="$PROJECT_DIR$/test/ListTrie/main.cpp" />
         <option value="$PROJECT_DIR$/include/DaTrie.hpp" />
-        <option value="$PROJECT_DIR$/include/Tester.hpp" />
         <option value="$PROJECT_DIR$/include/TrieUtility.hpp" />
         <option value="$PROJECT_DIR$/test/DaTrie/main.cpp" />
         <option value="$PROJECT_DIR$/main.cpp" />
+        <option value="$PROJECT_DIR$/include/Tester.hpp" />
         <option value="$PROJECT_DIR$/include/DaTrieBuilder.hpp" />
       </list>
     </option>
@@ -167,7 +163,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="1280" />
+    <option name="width" value="2560" />
     <option name="height" value="1577" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -523,20 +519,22 @@
       <workItem from="1495609007845" duration="47067000" />
       <workItem from="1496921939079" duration="8024000" />
       <workItem from="1497866297631" duration="266000" />
-      <workItem from="1497948122552" duration="1545000" />
+      <workItem from="1497948122552" duration="4174000" />
+      <workItem from="1498024749304" duration="809000" />
+      <workItem from="1498032149888" duration="2915000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="157697000" />
+    <option name="totallyTimeSpent" value="164050000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="1577" extended-state="0" />
+    <frame x="0" y="23" width="2560" height="1577" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16796875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.083984375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295756" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3295756" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="LuaJ" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295756" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -591,7 +589,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="690">
           <caret line="46" column="20" lean-forward="false" selection-start-line="46" selection-start-column="20" selection-end-line="46" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -608,9 +605,14 @@
           <caret line="222" column="15" lean-forward="true" selection-start-line="222" selection-start-column="15" selection-end-line="222" selection-end-column="15" />
           <folding>
             <element signature="e#207#226#0" expanded="true" />
-            <element signature="e#3399#3408#0" expanded="true" />
-            <element signature="e#3762#3774#0" expanded="true" />
-            <element signature="e#4365#4374#0" expanded="true" />
+            <element signature="e#1077#1086#0" expanded="true" />
+            <element signature="e#1138#1147#0" expanded="true" />
+            <element signature="e#1193#1202#0" expanded="true" />
+            <element signature="e#2279#2288#0" expanded="true" />
+            <element signature="e#2935#2944#0" expanded="true" />
+            <element signature="e#3407#3416#0" expanded="true" />
+            <element signature="e#3770#3782#0" expanded="true" />
+            <element signature="e#4373#4382#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -716,9 +718,14 @@
           <caret line="117" column="3" lean-forward="false" selection-start-line="117" selection-start-column="3" selection-end-line="117" selection-end-column="3" />
           <folding>
             <element signature="e#207#226#0" expanded="true" />
-            <element signature="e#3399#3408#0" expanded="true" />
-            <element signature="e#3762#3774#0" expanded="true" />
-            <element signature="e#4365#4374#0" expanded="true" />
+            <element signature="e#1077#1086#0" expanded="true" />
+            <element signature="e#1138#1147#0" expanded="true" />
+            <element signature="e#1193#1202#0" expanded="true" />
+            <element signature="e#2279#2288#0" expanded="true" />
+            <element signature="e#2935#2944#0" expanded="true" />
+            <element signature="e#3407#3416#0" expanded="true" />
+            <element signature="e#3770#3782#0" expanded="true" />
+            <element signature="e#4373#4382#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -727,7 +734,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -744,9 +750,14 @@
           <caret line="118" column="0" lean-forward="false" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
           <folding>
             <element signature="e#207#226#0" expanded="true" />
-            <element signature="e#3399#3408#0" expanded="true" />
-            <element signature="e#3762#3774#0" expanded="true" />
-            <element signature="e#4365#4374#0" expanded="true" />
+            <element signature="e#1077#1086#0" expanded="true" />
+            <element signature="e#1138#1147#0" expanded="true" />
+            <element signature="e#1193#1202#0" expanded="true" />
+            <element signature="e#2279#2288#0" expanded="true" />
+            <element signature="e#2935#2944#0" expanded="true" />
+            <element signature="e#3407#3416#0" expanded="true" />
+            <element signature="e#3770#3782#0" expanded="true" />
+            <element signature="e#4373#4382#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -769,7 +780,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -779,9 +789,14 @@
           <caret line="118" column="0" lean-forward="false" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
           <folding>
             <element signature="e#207#226#0" expanded="true" />
-            <element signature="e#3399#3408#0" expanded="true" />
-            <element signature="e#3762#3774#0" expanded="true" />
-            <element signature="e#4365#4374#0" expanded="true" />
+            <element signature="e#1077#1086#0" expanded="true" />
+            <element signature="e#1138#1147#0" expanded="true" />
+            <element signature="e#1193#1202#0" expanded="true" />
+            <element signature="e#2279#2288#0" expanded="true" />
+            <element signature="e#2935#2944#0" expanded="true" />
+            <element signature="e#3407#3416#0" expanded="true" />
+            <element signature="e#3770#3782#0" expanded="true" />
+            <element signature="e#4373#4382#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -811,7 +826,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="23" column="29" lean-forward="false" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -841,7 +855,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="363">
           <caret line="1500" column="0" lean-forward="false" selection-start-line="1500" selection-start-column="0" selection-end-line="1500" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -899,20 +912,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="690">
           <caret line="46" column="20" lean-forward="false" selection-start-line="46" selection-start-column="20" selection-end-line="46" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/include/Tester.hpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="57" column="41" lean-forward="false" selection-start-line="57" selection-start-column="41" selection-end-line="57" selection-end-column="41" />
-          <folding>
-            <element signature="e#207#226#0" expanded="true" />
-            <element signature="e#3399#3408#0" expanded="true" />
-            <element signature="e#3762#3774#0" expanded="true" />
-            <element signature="e#4365#4374#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -920,15 +919,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="13" lean-forward="true" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="30" lean-forward="false" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -942,27 +932,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/DaTrie.hpp">
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
+        <state relative-caret-position="345">
+          <caret line="23" column="30" lean-forward="false" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/DaTrieBuilder.hpp">
+    <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="249" column="0" lean-forward="true" selection-start-line="249" selection-start-column="0" selection-end-line="249" selection-end-column="0" />
+        <state relative-caret-position="435">
+          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding>
-            <element signature="e#195#211#0" expanded="true" />
+            <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/include/TrieUtility.hpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1155">
+        <state relative-caret-position="956">
           <caret line="77" column="33" lean-forward="false" selection-start-line="77" selection-start-column="33" selection-end-line="77" selection-end-column="33" />
           <folding>
             <element signature="e#917#926#0" expanded="true" />
@@ -972,11 +962,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp">
+    <entry file="file://$PROJECT_DIR$/include/Tester.hpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="15" lean-forward="false" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
+        <state relative-caret-position="-423">
+          <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+          <folding>
+            <element signature="e#207#226#0" expanded="true" />
+            <element signature="e#1077#1086#0" expanded="true" />
+            <element signature="e#1138#1147#0" expanded="true" />
+            <element signature="e#1193#1202#0" expanded="true" />
+            <element signature="e#2279#2288#0" expanded="true" />
+            <element signature="e#2935#2944#0" expanded="true" />
+            <element signature="e#3407#3416#0" expanded="true" />
+            <element signature="e#3770#3782#0" expanded="true" />
+            <element signature="e#4373#4382#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/DaTrie.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="17" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/DaTrieBuilder.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="24" column="26" lean-forward="true" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
+          <folding>
+            <element signature="e#195#211#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

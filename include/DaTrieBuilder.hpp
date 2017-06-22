@@ -16,7 +16,7 @@
 
 namespace da_trie{
 
-    using refer = int;
+    using refer = int64_t;
     using da_refer = refer;
     using trie_refer = list_trie::refer;
 

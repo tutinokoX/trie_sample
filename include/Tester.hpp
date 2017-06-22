@@ -120,20 +120,20 @@ bool Tester::find_speed_test( T &trie ){
     std::cout << "\nfind_speed_test ... " << std::endl;
 
     ProcessTimer pt;
-    pt.AddTimerSuffix(0 , 1);
-    pt.StartTimer();
+    pt.AddTimerSuffix(0 , 0);
+
 
     for(size_t i = 0 ; i < _RANDOM_KEYSET.size() ; i++) {
-
         std::string key = _RANDOM_KEYSET[i];
 
+        pt.StartTimer();
         if (!trie.Follow( key )) {
             std::cerr << "err 　" << i << " : " << _RANDOM_KEYSET[i] << "\n";
             return false;
         }
+        pt.Measure(0);
     }
 
-    pt.Measure(0);
     pt.Output();
 
     std::cout << "done.\n";
