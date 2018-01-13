@@ -1,0 +1,14 @@
+# 「.DS_Store」や「._.DS_Store」を除外
+*.DS_Store
+
+# 指定
+_*
+
+# 成果物
+build
+test_build
+cmake-build-debug
+
+
+# cache
+.idea
