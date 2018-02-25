@@ -8,7 +8,7 @@ _*
 build
 test_build
 cmake-build-debug
-
+*.dic
 
 # cache
 .idea

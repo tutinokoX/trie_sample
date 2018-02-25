@@ -3,7 +3,7 @@
  * */
 
 #include <gtest/gtest.h>
-#include "DaTrie.hpp"
+#include "TableTrie.hpp"
 #include "Tester.hpp"
 #include "TrieUtility.hpp"
 
@@ -14,51 +14,52 @@ namespace {
 
     Tester tester;
     TrieUtility tu;
-    std::string save_path = "../test/_savedic/datrie.dic";
+    std::string save_path = "../test/_savedic/tabletrie.dic";
 }
 
-TEST(DaTrie , keyset){
+TEST(TableTrie , keyset){
 
     std::string file_path;
     std::cout << "keyset path \n ->";
     std::cin >> file_path;
-    // file_path = "/Users/ydoi/Documents/study/xsda-dev/test/_KEYSET/paper_keyset";
+    // file_path = "../../../test/keyset/wordnet-3.0-word-100000";
 
     tester.set_keys(file_path);
     tu.SetKeys(file_path);
 }
 
 
-TEST(DaTrie , build){
-    da_trie::DaTrie trie;
+TEST(TableTrie , build){
+    table_trie::TableTrie trie;
 
     tu.Build(trie);
     tu.SetSavepath(save_path);
     tu.Save(trie);
-    std::cout << "\nda size : " << tu.SizeCalc(trie) << std::endl;
+    std::cout << "\ntabletrie size : " << tu.SizeCalc(trie) << std::endl;
+
     // trie.Output();
 }
 
-TEST(DaTrie, find ) {
+TEST(TableTrie, find ) {
 
-    da_trie::DaTrie trie;
+    table_trie::TableTrie trie;
     tu.Load(trie , save_path);
 
     tester.find_test(trie);
 }
 
-TEST(DaTrie, dump ) {
+TEST(TableTrie, dump ) {
 
-    da_trie::DaTrie trie;
+    table_trie::TableTrie trie;
     tu.Load(trie , save_path);
-
+    
     tester.dump_test(trie);
 }
 
-TEST(DaTrie, find_speed ) {
+TEST(TableTrie, find_speed ) {
 
-    da_trie::DaTrie trie;
+    table_trie::TableTrie trie;
     tu.Load(trie , save_path);
-
+    
     tester.find_speed_test(trie);
 }

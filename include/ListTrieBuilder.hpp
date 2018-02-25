@@ -36,8 +36,6 @@ namespace list_trie{
 
         bool StaticInsert(std::vector<std::string> keyset);
         bool DynamicInsert(std::string str);
-
-
     };
 
 
@@ -82,8 +80,7 @@ namespace list_trie{
 
         return true;
     }
-
-
+    
 }
 
 #endif //TRIE_SAMPLE_LISTTRIE_HPP

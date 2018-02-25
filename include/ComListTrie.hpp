@@ -2,8 +2,8 @@
 // Created by ydoi-mac on 2017/05/20.
 //
 
-#ifndef TRIE_SAMPLE_LISTTRIE_T_HPP
-#define TRIE_SAMPLE_LISTTRIE_T_HPP
+#ifndef TRIE_SAMPLE_COM_LISTTRIE_T_HPP
+#define TRIE_SAMPLE_COM_LISTTRIE_T_HPP
 
 #include "ComListTrieBuilder.hpp"
 
@@ -80,4 +80,4 @@ namespace com_list_trie {
 
 
 }
-#endif //TRIE_SAMPLE_LISTTRIE_T_HPP
+#endif //TRIE_SAMPLE_COM_LISTTRIE_T_HPP

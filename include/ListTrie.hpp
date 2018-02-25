@@ -22,7 +22,7 @@ namespace list_trie {
 
         refer Goto(refer state , uint8_t label);
         bool Follow(std::string key);
-
+        
     };
 
 

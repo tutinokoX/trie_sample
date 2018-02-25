@@ -10,13 +10,16 @@
 #include <map>
 // #include <queue>
 #include <stack>
-#include "ListTrie.hpp"
 #include "ListTrieBuilder.hpp"
+#include "ListTrie.hpp"
 #include "StateOut.hpp"
+#include "Basics.hpp"
+
+
 
 namespace da_trie{
 
-    using refer = int64_t;
+    using refer = int32_t;
     using da_refer = refer;
     using trie_refer = list_trie::refer;
 
@@ -34,8 +37,7 @@ namespace da_trie{
         std::stack<trie_refer> ORDER;
         std::map<trie_refer , da_refer> MATCH;
 
-        // trieとdaのインデックス番号を対応を保存方法を検討中
-
+        // trieとdaのインデックス番号を対応の保存方法を検討中
         StateOut so;
         size_t counter = 0;
 
@@ -234,21 +236,51 @@ namespace da_trie{
 
         void Output();
 
+        double SizeCalc();
         void Dicsave(std::string file_path);
+        void Dicload(std::string file_path);
+
     };
 
 
+    double DaTrieBuilder::SizeCalc() {
+
+        size_t base_size = size_vector(BASE);
+        size_t check_size = size_vector(CHECK);
+        return (base_size+check_size) / (1024.0 * 1024.0);
+    }
+
     void DaTrieBuilder::Dicsave(std::string file_path) {
 
+        std::ofstream ofs(file_path);
+        if (!ofs) {
+            std::cerr << "DaTrieBuilder::DicSave\n";
+            std::cerr << "\nopen error : " << file_path << std::endl;
+            exit(1);
+        }
 
-        std::cout << "base  size : " << BASE.size() << "\n";
-        std::cout << "check size : " << CHECK.size() << "\n";
+        write_vector(BASE , ofs);
+        write_vector(CHECK , ofs);
+        // show_size("\nsize (MByte) : " , SizeCalc() , std::cout);
+        std::cout << std::endl;
+    }
 
-        // とりあえずデータの保存は後回し
 
+    void DaTrieBuilder::Dicload(std::string file_path) {
 
+        std::ifstream ifs{file_path};
+        if (!ifs) {
+            std::cerr << "DaTrieBuilder::Dicload\n";
+            std::cerr << "open error : " << file_path << std::endl;
+            exit(1);
+        }
+
+        read_vector(BASE , ifs);
+        read_vector(CHECK , ifs);
 
     }
+
+
 
     bool DaTrieBuilder::StaticInsert(std::vector <std::string> keyset) {
 

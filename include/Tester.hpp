@@ -67,6 +67,9 @@ public:
     template <class T>
     bool dump_test( T& trie );
 
+    template <class T>
+    std::string find_speed_test_out( T& trie );
+
 };
 
 
@@ -139,6 +142,38 @@ bool Tester::find_speed_test( T &trie ){
     std::cout << "done.\n";
 
     return true;
+}
+
+template <class T>
+std::string Tester::find_speed_test_out( T &trie ){
+
+    if(_RANDOM_KEYSET.empty()){
+        std::cerr << "err : KEYSETが設定されていません\n";
+        return "";
+    }
+
+    // std::cout << "\nfind_speed_test ... " << std::endl;
+
+    ProcessTimer pt;
+    pt.AddTimerSuffix(0 , 0);
+
+
+    for(size_t i = 0 ; i < _RANDOM_KEYSET.size() ; i++) {
+        std::string key = _RANDOM_KEYSET[i];
+
+        pt.StartTimer();
+        if (!trie.Follow( key )) {
+            std::cerr << "err 　" << i << " : " << _RANDOM_KEYSET[i] << "\n";
+            return "";
+        }
+        pt.Measure(0);
+    }
+
+    // pt.Output();
+
+    // std::cout << "done.\n";
+
+    return pt.DataOutput(0);
 }
 
 

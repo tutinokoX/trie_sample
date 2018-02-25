@@ -5,59 +5,64 @@
 #include <gtest/gtest.h>
 #include <ComListTrie.hpp>
 #include "ListTrie.hpp"
-#include "TableTrie.hpp"
 #include "ComListTrie.hpp"
 #include "Tester.hpp"
 #include "TrieUtility.hpp"
 
-// using namespace list_trie;
-// using namespace table_trie;
 
 namespace {
 
     Tester tester;
     TrieUtility tu;
+    std::string save_path = "../test/_savedic/listtrie.dic";
 }
 
-TEST(Trie , build){
+TEST(ListTrie , keyset){
 
     std::string file_path;
     std::cout << "keyset path \n ->";
     std::cin >> file_path;
+    // file_path = "../../../test/keyset/wordnet-3.0-word-100000";
 
     tester.set_keys(file_path);
     tu.SetKeys(file_path);
 }
 
 
-TEST(ListTrie, all ) {
-/*
-    list_trie::ListTrie list;
-    tu.Build(list);
+TEST(ListTrie , build){
+    com_list_trie::ComListTrie trie;
 
-    tester.find_test(list);
-    tester.dump_test(list);
-    tester.find_speed_test(list);
-*/
+    std::cout << "ポインタではなく配列のインデックス番号を使用したComListTrie" << std::endl;
+
+    tu.Build(trie);
+    tu.SetSavepath(save_path);
+    tu.Save(trie);
+    std::cout << "\nlisttrie size : " << tu.SizeCalc(trie) << std::endl;
+
+
+    // trie.Output();
 }
 
-TEST(TableTrie , all ){
-/*
-    table_trie::TableTrie table;
-    tu.Build(table);
+TEST(ListTrie, find ) {
 
-    tester.find_test(table);
-    tester.dump_test(table);
-    tester.find_speed_test(table);
-*/
+    com_list_trie::ComListTrie trie;
+    tu.Load(trie , save_path);
+
+    tester.find_test(trie);
 }
 
-TEST(ComListTrie , all ){
+TEST(ListTrie, dump ) {
 
-    com_list_trie::ComListTrie clist;
-    tu.Build(clist);
+    com_list_trie::ComListTrie trie;
+    tu.Load(trie , save_path);
 
-    tester.find_test(clist);
-    tester.dump_test(clist);
-    tester.find_speed_test(clist);
+    tester.dump_test(trie);
+}
+
+TEST(ListTrie, find_speed ) {
+
+    com_list_trie::ComListTrie trie;
+    tu.Load(trie , save_path);
+
+    tester.find_speed_test(trie);
 }

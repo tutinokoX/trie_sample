@@ -6,7 +6,7 @@
 #define TRIE_SAMPLE_TABLETRIE_BUILDER_HPP
 
 #include <vector>
-
+#include "Basics.hpp"
 
 namespace table_trie{
 
@@ -31,6 +31,10 @@ namespace table_trie{
 
         bool StaticInsert(std::vector<std::string> keyset);
         bool DynamicInsert(std::string str);
+
+        double SizeCalc();
+        void Dicsave(std::string file_path);
+        void Dicload(std::string file_path);
     };
 
 
@@ -84,6 +88,54 @@ namespace table_trie{
         }
 
         return true;
+    }
+
+
+
+
+    double TableTrieBuilder::SizeCalc() {
+        // MByteで出力
+        size_t table_size = size_vector(table);
+        return (table_size) / (1024.0 * 1024.0);
+    }
+
+
+    void TableTrieBuilder::Dicsave(std::string file_path) {
+
+        std::ofstream ofs(file_path);
+        if (!ofs) {
+            std::cerr << "DaTrieBuilder::DicSave\n";
+            std::cerr << "\nopen error : " << file_path << std::endl;
+            exit(1);
+        }
+
+
+        size_t table_num = table.size();
+        write_value(table_num , ofs);
+        for(int ti = 0 ; ti < table_num ; ti++){
+            write_vector(table[ti] , ofs);
+        }
+
+        // show_size("\nsize (MByte) : " , SizeCalc() , std::cout);
+    }
+
+    void TableTrieBuilder::Dicload(std::string file_path) {
+
+        std::ifstream ifs{file_path};
+        if (!ifs) {
+            std::cerr << "DaTrieBuilder::Dicload\n";
+            std::cerr << "open error : " << file_path << std::endl;
+            exit(1);
+        }
+
+        size_t table_num = 0;
+        read_value(table_num , ifs);
+        table.resize(table_num);
+        for(int ti = 0 ; ti < table_num ; ti++){
+            read_vector(table[ti] , ifs);
+        }
+
+
     }
 
 

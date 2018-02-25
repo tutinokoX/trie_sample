@@ -5,6 +5,8 @@
 #ifndef TRIE_SAMPLE_COM_LISTTRIEBUILDER_HPP
 #define TRIE_SAMPLE_COM_LISTTRIEBUILDER_HPP
 
+#include "Basics.hpp"
+
 namespace com_list_trie{
 
 
@@ -41,6 +43,11 @@ namespace com_list_trie{
 
         bool StaticInsert(std::vector<std::string> keyset);
         bool DynamicInsert(std::string str);
+
+        double SizeCalc();
+        void Dicsave(std::string file_path);
+        void Dicload(std::string file_path);
+
     };
 
 
@@ -95,11 +102,50 @@ namespace com_list_trie{
             if( !DynamicInsert( keyset[i] ) ) return false;
         }
 
-        std::cout << "F_CHILD size : " << F_CHILD.size() << "\n";
+        // std::cout << "F_CHILD size : " << F_CHILD.size() << "\n";
 
         return true;
     }
 
+
+    double ComListTrieBuilder::SizeCalc() {
+
+        size_t f_child_size = size_vector(F_CHILD);
+        size_t n_sibling_size = size_vector(N_SIBLING);
+        size_t label_size = size_vector(LABEL);
+
+        return (f_child_size + n_sibling_size + label_size) / (1024.0 * 1024.0);
+    }
+
+    void ComListTrieBuilder::Dicsave(std::string file_path) {
+
+        std::ofstream ofs(file_path);
+        if (!ofs) {
+            std::cerr << "ComListTrieBuilder::DicSave\n";
+            std::cerr << "\nopen error : " << file_path << std::endl;
+            exit(1);
+        }
+
+        write_vector(F_CHILD , ofs);
+        write_vector(N_SIBLING , ofs);
+        write_vector(LABEL , ofs);
+
+        // show_size("\nsize (MByte) : " , SizeCalc() , std::cout);
+    }
+
+
+    void ComListTrieBuilder::Dicload(std::string file_path) {
+        std::ifstream ifs{file_path};
+        if (!ifs) {
+            std::cerr << "ComListTrieBuilder::Dicload\n";
+            std::cerr << "open error : " << file_path << std::endl;
+            exit(1);
+        }
+
+        read_vector(F_CHILD , ifs);
+        read_vector(N_SIBLING , ifs);
+        read_vector(LABEL , ifs);
+    }
 
 }
 

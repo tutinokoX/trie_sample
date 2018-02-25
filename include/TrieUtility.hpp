@@ -29,31 +29,30 @@ private:
     }
 
 
-
 public:
 
 
-    void SetKeys(std::string file_path){
+    void SetKeys(std::string file_path) {
 
-        read_keys(file_path , _KEYSET);
+        read_keys(file_path, _KEYSET);
     }
 
-    void SetSavepath(std::string file_path){
+    void SetSavepath(std::string file_path) {
 
         save_path = file_path;
     }
 
     template<class T>
-    void ConfSplit( T &trie ,  std::string value){
+    void ConfSplit(T &trie, std::string value) {
 
         std::string data;
         std::vector<std::string> buf;
         std::stringstream ss(value);
-        while( getline(ss , data , '_') ){
+        while (getline(ss, data, '_')) {
             buf.push_back(data);
         }
-        trie.Setup_SPLIT_NUM( std::stoi( buf[0] ) );
-        trie.Setup_LIMIT_PER( std::stod( buf[1] ) );
+        trie.Setup_SPLIT_NUM(std::stoi(buf[0]));
+        trie.Setup_LIMIT_PER(std::stod(buf[1]));
     }
 
 
@@ -61,21 +60,37 @@ public:
      * 静的と動的の区別をつけれるようにするべきかも
      */
     template<class T>
-    void Build( T &trie ) {
+    void Build(T &trie) {
 
         trie.StaticInsert(_KEYSET);
     }
 
 
+    template<class T>
+    void Save(T &trie) {
 
-    template <class T>
-    void Save(T &trie){
-
-        if(save_path.empty()) {
+        if (save_path.empty()) {
             std::cout << "save path \n -> ";
             std::cin >> save_path;
         }
-        trie.Dicsave( save_path );
+        trie.Dicsave(save_path);
+    }
+
+    
+    template<class T>
+    void Load(T &trie, std::string load_path = "") {
+
+        if (load_path == "") {
+            std::cout << "load path \n -> ";
+            std::cin >> load_path;
+        }
+        trie.Dicload(load_path);
+    }
+
+    template<class T>
+    std::string SizeCalc(T &trie) {
+
+        return std::to_string(trie.SizeCalc()) + " [MByte]";
     }
 
 };
